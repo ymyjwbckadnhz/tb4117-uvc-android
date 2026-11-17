@@ -8,6 +8,21 @@
 
 ---
 
+## 下载
+
+| 包 | 签名 | 说明 |
+|---|---|---|
+| `tb4117-uvc-v0.2-release.apk` | **正式签名**（`CN=TB4117 UVC`） | 推荐安装；以后升级无需卸载 |
+| `tb4117-uvc-v0.2-debug.apk` | 调试签名 | 早期构建，仅存档 |
+
+发行版地址：
+
+- GitHub <https://github.com/ymyjwbckadnhz/tb4117-uvc-android/releases>
+- Gitee <https://gitee.com/OvO_rain/tb4117-uvc-android/releases>
+
+> 两个签名不通用。从 debug 包换成 release 包时要先卸载旧版，
+> 之后同一个 key 签的版本才能覆盖安装。
+
 ## 功能
 
 | 功能 | 说明 |
