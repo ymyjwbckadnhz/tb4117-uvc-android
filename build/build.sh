@@ -4,6 +4,9 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
+if [ -z "$SDK" ] && [ -d /usr/local/lib/android/sdk ]; then
+  SDK=/usr/local/lib/android/sdk
+fi
 [ -n "$SDK" ] || { echo "ANDROID_SDK_ROOT / ANDROID_HOME not set" >&2; exit 1; }
 
 BUILD_TOOLS="$(ls -d "$SDK"/build-tools/* | sort -V | tail -1)"

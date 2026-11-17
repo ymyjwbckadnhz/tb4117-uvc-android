@@ -10,6 +10,9 @@ on:
 permissions:
   contents: write
 
+env:
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+
 jobs:
   apk:
     runs-on: ubuntu-latest
@@ -23,13 +26,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install platform + build-tools
+      # ubuntu-latest already ships the Android SDK; do not use setup-android,
+      # its `sdkmanager tools` step fails on current runners.
+      - name: Install platform 30 + build-tools
         run: |
-          sdkmanager --install "platforms;android-30" "build-tools;34.0.0"
-          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+          SDK="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          echo "SDK=$SDK"
+          ls "$SDK/platforms" || true
+          yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || \
+            yes | "$(ls -d $SDK/cmdline-tools/*/bin | tail -1)/sdkmanager" --licenses > /dev/null 2>&1 || true
+          "$(ls -d $SDK/cmdline-tools/*/bin | tail -1)/sdkmanager" --install "platforms;android-30" "build-tools;34.0.0"
+          ls "$SDK/platforms"
 
       - name: Build APK
         run: bash build/build.sh
