@@ -1,0 +1,25 @@
+4117 Thermal Camera (UVC)
+Copyright 2025 4117 Thermal Camera contributors
+
+This product is an unofficial, community-developed project.
+
+It is NOT affiliated with, endorsed by, sponsored by, or supported by
+Hikvision (杭州海康威视数字技术股份有限公司) or any camera module vendor.
+"Hikvision", "HIK", and other product names mentioned in this repository are
+trademarks of their respective owners and are used only for descriptive
+purposes (to state which hardware this software is intended to work with).
+
+No vendor SDK code, decompiled vendor code, vendor firmware, or vendor
+binaries are included in this repository. The protocol notes in
+docs/protocol.md describe message formats observed on the USB bus for the
+sole purpose of interoperability with the hardware; they were not produced by
+copying vendor source code.
+
+This software talks to the camera module over USB Video Class vendor-specific
+extension units and sends the module's private commands. Those commands can
+leave the module in an inconsistent state that requires a power cycle to
+recover. Use at your own risk.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

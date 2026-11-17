@@ -1,0 +1,31 @@
+# build output
+build/out/
+build/*.apk
+
+# signing material — NEVER commit
+*.keystore
+*.jks
+*.p12
+build/.dev.keystore
+
+# logs and local capture dumps
+*.log
+usbmon*.txt
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# captured protocol dumps / vendor artifacts (must not be published)
+apk_x/
+apk_java/
+strs/
+*.so
+*.apk.bak
+
+# apksigner output
+*.idsig
+
