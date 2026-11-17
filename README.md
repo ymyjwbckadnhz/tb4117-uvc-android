@@ -25,6 +25,12 @@
 |---|---|---|
 | ![main](docs/screenshots/main.png) | ![overlay](docs/screenshots/overlay.png) | ![adjust](docs/screenshots/adjust.png) |
 
+> **Gitee 用户注意**：Gitee 的 README 渲染器不解析相对路径的图片（会 404），这是平台限制，不是仓库缺文件。
+> 图片显示不出来时，直接点这三个链接查看：
+> [主界面](https://gitee.com/OvO_rain/tb4117-uvc-android/raw/main/docs/screenshots/main.png) ·
+> [测温叠加](https://gitee.com/OvO_rain/tb4117-uvc-android/raw/main/docs/screenshots/overlay.png) ·
+> [图像调节](https://gitee.com/OvO_rain/tb4117-uvc-android/raw/main/docs/screenshots/adjust.png)
+
 ## 兼容性
 
 - **机芯**：USB `2bdf:0101`（HikCamera / TB-4117 系列，UVC 1.10）。代码按 VID 匹配，不同 PID 也能尝试打开。
