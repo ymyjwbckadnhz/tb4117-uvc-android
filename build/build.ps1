@@ -22,7 +22,7 @@ if (-not $jdk) { $jdk = Split-Path -Parent (Split-Path -Parent (Get-Command java
 if (-not $jdk) { throw "JDK not found. Set `$env:JAVA_HOME" }
 
 $out = Join-Path $root "build\out"
-$apk = Join-Path $root "build\4117Camera-debug.apk"
+$apk = Join-Path $root "build\tb4117-uvc-debug.apk"
 $ks  = Join-Path $root "build\.dev.keystore"     # git-ignored
 
 Remove-Item -Recurse -Force $out -ErrorAction SilentlyContinue

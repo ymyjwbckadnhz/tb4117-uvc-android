@@ -24,7 +24,7 @@ if (-not $sdk) { $sdk = "$env:LOCALAPPDATA\Android\Sdk" }
 $bt = (Get-ChildItem (Join-Path $sdk "build-tools") -Directory | Sort-Object Name -Descending | Select-Object -First 1).FullName
 
 $src = Join-Path $root "build\out\aligned.apk"
-$dst = Join-Path $root "build\4117Camera-release.apk"
+$dst = Join-Path $root "build\tb4117-uvc-release.apk"
 
 Write-Host "== sign (release) =="
 & "$bt\apksigner.bat" sign --ks $env:KEYSTORE --ks-key-alias $env:KEY_ALIAS `

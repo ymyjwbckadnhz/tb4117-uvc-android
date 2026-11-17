@@ -1,4 +1,4 @@
-# 4117 热像仪（UVC 版）
+# tb4117-uvc-android
 
 > 一个不依赖厂商 SDK 的 Android 热成像查看器，通过标准 **USB Video Class (UVC)** 协议直接读取 TB-4117 系列热成像机芯的 MJPEG 视频流，并用 UVC 扩展单元（XU）控制测温叠加、亮度、对比度等参数。
 
@@ -33,7 +33,7 @@
 
 ## 安装
 
-1. 下载 [Releases](../../releases) 里的 `4117Camera-v0.2.apk`；
+1. 下载 [Releases](../../releases) 里的 `tb4117-uvc-v0.2.apk`；
 2. 手机上允许"安装未知来源应用"；
 3. 打开 App，**先允许相机权限**（Android 把 UVC 设备归类为相机，没有该权限拿不到 USB 设备），再允许 USB 设备访问；
 4. 插入机芯，画面自动出现。
