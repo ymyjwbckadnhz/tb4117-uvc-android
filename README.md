@@ -1,5 +1,7 @@
 # tb4117-uvc-android
 
+[![build](https://github.com/ymyjwbckadnhz/tb4117-uvc-android/actions/workflows/build.yml/badge.svg)](https://github.com/ymyjwbckadnhz/tb4117-uvc-android/actions/workflows/build.yml)
+
 > 一个不依赖厂商 SDK 的 Android 热成像查看器，通过标准 **USB Video Class (UVC)** 协议直接读取 TB-4117 系列热成像机芯的 MJPEG 视频流，并用 UVC 扩展单元（XU）控制测温叠加、亮度、对比度等参数。
 
 **非官方项目，与海康威视及任何模组厂商无关。** 详见 [NOTICE](NOTICE)。
